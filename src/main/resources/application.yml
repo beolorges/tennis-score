@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    username: postgres
+    password: password
+    url: jdbc:postgresql://localhost:5422/tennis-score
+  sql:
+    init:
+      mode: always
