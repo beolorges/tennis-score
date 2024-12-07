@@ -1,4 +1,4 @@
-package com.ufmg.tennis_score;
+package com.ufmg.tennisscore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

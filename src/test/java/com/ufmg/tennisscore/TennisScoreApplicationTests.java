@@ -1,4 +1,4 @@
-package com.ufmg.tennis_score;
+package com.ufmg.tennisscore;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
