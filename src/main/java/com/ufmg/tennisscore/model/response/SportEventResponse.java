@@ -1,7 +1,5 @@
 package com.ufmg.tennisscore.model.response;
 
-import com.ufmg.tennisscore.model.entity.Contest;
-import com.ufmg.tennisscore.model.entity.Stadium;
 import com.ufmg.tennisscore.model.enums.EventPhase;
 import lombok.Data;
 
@@ -13,8 +11,8 @@ import java.util.List;
 public class SportEventResponse {
     private LocalDateTime dateTime;
     private EventPhase eventPhase;
-    private Contest contest;
-    private Stadium stadium;
+    private ContestResponse contest;
+    private StadiumResponse stadium;
     private Duration timeToEvent;
     private List<ContenderResponse> contenders;
 }

@@ -21,6 +21,6 @@ public class Contender implements Serializable {
     @Column(name = "data_nascimento")
     private LocalDate birthDay;
 
-    @OneToMany(mappedBy = "winner")
+    @OneToMany(mappedBy = "winner", fetch = FetchType.LAZY)
     private List<Award> awards;
 }
