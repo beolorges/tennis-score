@@ -8,9 +8,7 @@ CREATE TABLE IF NOT EXISTS Competidor(
 -- Competicao
 CREATE TABLE IF NOT EXISTS Competicao(
     id serial primary key,
-    vencedor serial,
     final serial,
-    foreign key (vencedor) references Competidor(id),
     foreign key (final) references EventoEsportivo(id)
 );
 
@@ -27,7 +25,7 @@ CREATE TABLE IF NOT EXISTS Estadio(
 CREATE TABLE IF NOT EXISTS EventoEsportivo(
     id serial primary key,
     data timestamp,
-    status varchar(50) not null,
+    fase varchar(50) not null,
     competicao serial not null,
     estadio serial,
     foreign key (competicao) references Competicao(id),
@@ -47,10 +45,11 @@ CREATE TABLE IF NOT EXISTS Premiacao(
     id serial primary key,
     competicao serial not null,
     evento_esportivo serial,
-    fase varchar(50) not null,
     valor real not null,
+    vencedor serial,
     foreign key (competicao) references Competicao(id),
-    foreign key (evento_esportivo) references EventoEsportivo(id)
+    foreign key (evento_esportivo) references EventoEsportivo(id),
+    foreign key (vencedor) references Competidor(id)
 );
 
 -- Competicao Competidor
