@@ -4,15 +4,14 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 @Entity
 @Data
 @Table(name = "Premiacao")
 public class Award implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int id;
 
     @OneToOne
     @JoinColumn(name = "competicao")

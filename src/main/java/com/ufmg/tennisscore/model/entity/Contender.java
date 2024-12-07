@@ -6,15 +6,14 @@ import lombok.Data;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 @Table(name = "Competidor")
 @Data
 public class Contender implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int id;
 
     @Column(name = "nome")
     private String name;

@@ -7,7 +7,6 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Entity
 @Data
@@ -15,7 +14,7 @@ import java.util.UUID;
 public class SportEvent implements Serializable {
     @Id
     @GeneratedValue
-    private UUID id;
+    private int id;
 
     @Nullable
     @Column(name = "data")
@@ -25,10 +24,12 @@ public class SportEvent implements Serializable {
     @Enumerated(EnumType.STRING)
     private EventPhase eventPhase;
 
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "competicao")
     private Contest contest;
 
     @Nullable
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "estadio")
     private Stadium stadium;
 }
