@@ -1,4 +1,4 @@
-package com.ufmg.tennisscore.flow.sportevent;
+package com.ufmg.tennisscore.flow.getsportevent;
 
 import com.ufmg.tennisscore.exceptions.SportEventNotFoundException;
 import com.ufmg.tennisscore.model.entity.SportEvent;

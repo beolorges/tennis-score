@@ -1,6 +1,6 @@
 package com.ufmg.tennisscore.controller;
 
-import com.ufmg.tennisscore.flow.sportevent.SearchSportEventByIdFlow;
+import com.ufmg.tennisscore.flow.getsportevent.SearchSportEventByIdFlow;
 import com.ufmg.tennisscore.model.response.SportEventResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

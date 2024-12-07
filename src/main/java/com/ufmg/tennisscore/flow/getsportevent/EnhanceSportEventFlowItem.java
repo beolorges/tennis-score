@@ -1,4 +1,4 @@
-package com.ufmg.tennisscore.flow.sportevent;
+package com.ufmg.tennisscore.flow.getsportevent;
 
 import com.ufmg.tennisscore.model.response.SportEventResponse;
 
