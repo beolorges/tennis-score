@@ -18,7 +18,7 @@ public class Award implements Serializable {
     private Contest contest;
 
     @OneToOne
-    @JoinColumn(name = "evento_esportiov")
+    @JoinColumn(name = "evento_esportivo")
     private SportEvent sportEvent;
 
     @Column(name = "valor")

@@ -7,6 +7,7 @@ import lombok.Data;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 public class SportEventResponse {
@@ -15,4 +16,5 @@ public class SportEventResponse {
     private Contest contest;
     private Stadium stadium;
     private Duration timeToEvent;
+    private List<ContenderResponse> contenders;
 }

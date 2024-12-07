@@ -7,6 +7,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -32,4 +33,12 @@ public class SportEvent implements Serializable {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "estadio")
     private Stadium stadium;
+
+    @ManyToMany
+    @JoinTable(
+            name = "EventoCompetidor",
+            joinColumns = @JoinColumn(name = "evento_id"),
+            inverseJoinColumns = @JoinColumn(name = "competidor_id")
+    )
+    private List<Contender> contenders;
 }
