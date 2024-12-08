@@ -22,9 +22,7 @@ public class EnhanceSportEventWithTimeToEventFlowItemTest {
     @Test
     void shouldEnhanceSportEventResponseWithTimeToEvent() {
         // Given
-        LocalDateTime eventDateTime = LocalDateTime.now().plusHours(2); // Event is in 2 hours
-        Duration expectedTimeToEvent = Duration.between(LocalDateTime.now(), eventDateTime);
-
+        LocalDateTime eventDateTime = LocalDateTime.now().plusHours(2); // Evento em 2 horas
         SportEventResponse sportEventResponse = SportEventResponse.builder()
                 .dateTime(eventDateTime)
                 .build();
@@ -32,11 +30,14 @@ public class EnhanceSportEventWithTimeToEventFlowItemTest {
         // When
         enhanceSportEventWithTimeToEventFlowItem.enhance(sportEventResponse);
 
-        // Assert that the timeToEvent in the response is set correctly.
+        // Assert
         assertNotNull(sportEventResponse.getTimeToEvent(), "Time to event should not be null.");
 
-        // Assert that the timeToEvent is correctly calculated.
-        assertEquals(expectedTimeToEvent, sportEventResponse.getTimeToEvent(), "Time to event should be correctly calculated.");
+        // Comparação aproximada (granularidade em segundos)
+        long expectedSeconds = Duration.between(LocalDateTime.now(), eventDateTime).toSeconds();
+        long actualSeconds = sportEventResponse.getTimeToEvent().toSeconds();
+
+        assertEquals(expectedSeconds, actualSeconds, 1, "Time to event should be within a second difference.");
     }
 }
 
