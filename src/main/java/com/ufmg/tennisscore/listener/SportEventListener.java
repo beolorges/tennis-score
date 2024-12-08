@@ -1,5 +1,6 @@
-package com.ufmg.tennisscore.flow.gameeventnotification;
+package com.ufmg.tennisscore.listener;
 
+import com.ufmg.tennisscore.flow.gameeventnotification.EmitGameEventFlow;
 import com.ufmg.tennisscore.model.listenerevent.GameEvent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -16,6 +17,4 @@ public class SportEventListener {
     public void listener(GameEvent gameEvent) throws ExecutionException, InterruptedException {
         emitGameEventFlow.emit(gameEvent);
     }
-
-
 }

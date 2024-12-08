@@ -8,8 +8,6 @@ import org.springframework.messaging.simp.stomp.StompSessionHandler;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.messaging.WebSocketStompClient;
 
-import java.util.concurrent.ExecutionException;
-
 @Component
 @RequiredArgsConstructor
 public class EmitWebSocketEventFlow {
@@ -24,7 +22,6 @@ public class EmitWebSocketEventFlow {
             throw new RuntimeException(e);
         }
 
-        System.out.println(gameEvent);
         stompSession.send(destinationUrl, gameEvent);
     }
 }

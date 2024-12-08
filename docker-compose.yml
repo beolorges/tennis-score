@@ -22,7 +22,13 @@ services:
     volumes:
       - ./utils/wimbledom:/utils
     command: bash -c "node /utils/app.js"
-
+  both-subscription:
+    image: node:12.16.1
+    ports:
+      - "7072:7072"
+    volumes:
+      - ./utils/both:/utils
+    command: bash -c "node /utils/app.js"
   rabbitmq:
     image: rabbitmq:3-management-alpine
     ports:
