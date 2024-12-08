@@ -16,7 +16,7 @@ public class Contender implements Serializable {
     private int id;
 
     @Column(name = "nome")
-    private String name;
+    protected String name;
 
     @Column(name = "data_nascimento")
     private LocalDate birthDay;

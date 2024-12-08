@@ -13,8 +13,8 @@ import java.io.Serializable;
 
 @Entity
 @Data
-@Table(name = "Estadio")
-public class Stadium implements Serializable {
+@Table(name = "Aeroporto")
+public class Airport implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
@@ -24,9 +24,6 @@ public class Stadium implements Serializable {
 
     @Column(name = "nome")
     protected String name;
-
-    @Column(name = "capacidade")
-    private int capacity;
 
     @Nullable
     @Column(name = "site")
