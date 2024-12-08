@@ -3,6 +3,7 @@ package com.ufmg.tennisscore.model.entity;
 import com.ufmg.tennisscore.model.enums.EventPhase;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -10,6 +11,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
+@Builder
 @Data
 @Table(name = "EventoEsportivo")
 public class SportEvent implements Serializable {

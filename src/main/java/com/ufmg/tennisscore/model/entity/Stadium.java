@@ -7,12 +7,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Builder;
 import lombok.Data;
 
 import java.io.Serializable;
 
 @Entity
 @Data
+@Builder
 @Table(name = "Estadio")
 public class Stadium implements Serializable {
     @Id
