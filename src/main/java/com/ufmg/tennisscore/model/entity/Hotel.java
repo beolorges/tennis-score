@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Entity
 @Data
 @Table(name = "Hotel")
-public class Stadium implements Serializable {
+public class Hotel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
@@ -23,7 +23,7 @@ public class Stadium implements Serializable {
     private String zipCode;
 
     @Column(name = "nome")
-    protected String name;
+    private String name;
 
     @Column(name = "capacidade")
     private int capacity;

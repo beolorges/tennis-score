@@ -23,7 +23,7 @@ public class Airport implements Serializable {
     private String zipCode;
 
     @Column(name = "nome")
-    protected String name;
+    private String name;
 
     @Nullable
     @Column(name = "site")

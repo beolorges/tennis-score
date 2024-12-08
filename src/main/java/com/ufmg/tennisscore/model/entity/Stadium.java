@@ -23,7 +23,7 @@ public class Stadium implements Serializable {
     private String zipCode;
 
     @Column(name = "nome")
-    protected String name;
+    private String name;
 
     @Column(name = "capacidade")
     private int capacity;
