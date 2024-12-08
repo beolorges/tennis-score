@@ -8,6 +8,7 @@ import lombok.Setter;
 public abstract class TennisScoreCustomException extends RuntimeException {
     private String message;
     private int status;
+    private String code;
 
     protected TennisScoreCustomException(){}
 }

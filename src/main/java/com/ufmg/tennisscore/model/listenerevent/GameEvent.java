@@ -2,16 +2,14 @@ package com.ufmg.tennisscore.model.listenerevent;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.ufmg.tennisscore.model.enums.GameEventType;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Data
 @ToString
 @Builder
+@NoArgsConstructor
 @AllArgsConstructor
 public class GameEvent {
     private GameEventType type;

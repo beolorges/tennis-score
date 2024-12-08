@@ -1,8 +1,10 @@
 package com.ufmg.tennisscore.model.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -10,8 +12,10 @@ import java.util.List;
 
 @Entity
 @Builder
-@Table(name = "Competidor")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "Competidor")
 public class Contender implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
